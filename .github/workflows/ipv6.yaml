@@ -1,0 +1,16 @@
+name: 'IPv6'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  ping:
+    name: 'Ping'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Ping google IPv6"
+        run: "ping ipv6.google.com -c 10"
