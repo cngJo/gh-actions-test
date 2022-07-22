@@ -7,10 +7,19 @@ on:
 
 jobs:
 
-  ping:
-    name: 'Ping'
+  pingv6:
+    name: 'Ping IPv6'
     runs-on: ubuntu-latest
 
     steps:
       - name: "Ping google IPv6"
         run: "ping ipv6.google.com -c 10"
+
+
+  pingv4:
+    name: 'Ping IPv4'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Ping google IPv4"
+        run: "ping google.com -c 10"
